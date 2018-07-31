@@ -23,6 +23,9 @@ namespace Presentación
 
         private void button1_Click(object sender, EventArgs e)
         {
+            NuevoProducto frm = new NuevoProducto();
+            frm.ShowDialog();
+
             
 
 

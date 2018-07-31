@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Presentación
+namespace Vista
 {
-    public partial class FormSello : Form
+    public partial class ModificarProducto : Form
     {
-        public FormSello()
+        public ModificarProducto()
         {
             InitializeComponent();
         }
-
-       
     }
 }
