@@ -127,7 +127,7 @@
             "Código\t",
             "Nombre",
             "Categoria"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 6);
+            this.comboBox1.Location = new System.Drawing.Point(3, 7);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 23);
             this.comboBox1.TabIndex = 5;
