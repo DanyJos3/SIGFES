@@ -91,6 +91,7 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(870, 55);
             this.panelHeader.TabIndex = 7;
+            this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseMove);
             // 
             // label3
             // 
