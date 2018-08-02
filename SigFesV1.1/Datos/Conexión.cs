@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Datos
 {
-    class Conexión
+    public class Conexión
     {
 
         SqlConnection con;
