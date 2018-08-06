@@ -119,10 +119,8 @@ namespace Presentación
 
         private void btbLogin_Click_1(object sender, EventArgs e)
         {
-            //iniciarSesion();
-            this.Hide(); // se cierra el login
-            FormMenu principal = new FormMenu();
-            principal.Show();
+            iniciarSesion();
+            
         }
 
 

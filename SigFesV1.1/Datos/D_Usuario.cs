@@ -43,8 +43,9 @@ namespace Datos
             cmd.Parameters.AddWithValue("@pass",pass);
 
             leer = cmd.ExecuteReader();
-            cmd.Connection = conn.cerrarConexión();
+            
             return leer;
+            cmd.Connection = conn.cerrarConexión();
         }
     }
 }
