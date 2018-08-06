@@ -25,6 +25,14 @@ namespace Presentación
             InitializeComponent();
         }
 
+        private void NuevoProducto_Load(object sender, EventArgs e)
+        {
+            llenarCBProveedor();
+            llenarCBUnidad();
+            llenarCBCategoria();
+            //llenarCodigo();
+        }
+
 
         //Todo esto es para redimensionar el form con los paneles.
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -71,19 +79,10 @@ namespace Presentación
                 objProducto.Serie = tBserie.Text;
                 objProducto.Descripción = tBdescrip.Text;
                 objProducto.PrecioCompra = float.Parse(tBprecioCompra.Text);
-                objProducto.UnidadMedida = cBunidadMedida.Text;
+                objProducto.UnidadMedida1 = Convert.ToInt32(cBunidadMedida.SelectedIndex);
                 objProducto.Stock = float.Parse(tBstock.Text);
                 objProducto.Proveedor = cBproveedor.SelectedIndex;
 
-                MessageBox.Show(objProducto.Categoria + "" +
-                objProducto.Tipo + "" +
-                objProducto.Marca + "" +
-                objProducto.Serie + "" +
-                objProducto.Descripción + "" +
-                objProducto.PrecioCompra + "" +
-                objProducto.UnidadMedida + "" +
-                objProducto.Stock + "" +
-                objProducto.Proveedor + "");
 
 
                 productoCN.insertarProducto(objProducto);
@@ -97,22 +96,33 @@ namespace Presentación
             }
         }
 
-        //public void llenarCBMarca()
-        //{
-        //    String query = "select nombre from estudiantes";
-        //    con.Open();
-        //    SqlCommand cmd = new SqlCommand(query, con);
-        //    cmd.CommandText = query;
-        //    SqlDataReader dr = cmd.ExecuteReader();
-
-        //    while (dr.Read())
-        //    {
-        //        combobox.Items.Add(dr["nombre"].ToString());
-        //    }
-
-        //    con.Close();
-        //}
 
 
+        public void llenarCodigo()
+        {
+            tBcodigo.Text = productoCN.obtenerCod();
+        }
+        public void llenarCBCategoria()
+        {
+            cBcategoria.DataSource = productoCN.mostrarCategorias();
+            cBcategoria.DisplayMember = "nombre";
+            cBcategoria.ValueMember = "ID";
+        }
+
+        public void llenarCBUnidad()
+        {
+            cBunidadMedida.DataSource = productoCN.mostrarUnidades();
+            cBunidadMedida.DisplayMember = "nombre";
+            cBunidadMedida.ValueMember = "ID";
+        }
+
+        public void llenarCBProveedor()
+        {
+            cBproveedor.DataSource = productoCN.mostrarProveedores();
+            cBproveedor.DisplayMember = "nombreComercial";
+            cBproveedor.ValueMember = "idProveedor";
+        }
+
+       
     }
 }

@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.panelprincipal = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -46,8 +47,12 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnFacturacion = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
+            this.menúInventario = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.productosDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.todosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
+            this.tTproducto = new System.Windows.Forms.ToolTip(this.components);
             this.panelprincipal.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
@@ -56,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmenu)).BeginInit();
+            this.menúInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelprincipal
@@ -199,11 +205,12 @@
             // 
             // btnServ
             // 
+            this.btnServ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnServ.FlatAppearance.BorderSize = 0;
             this.btnServ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnServ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServ.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnServ.ForeColor = System.Drawing.Color.White;
             this.btnServ.Image = ((System.Drawing.Image)(resources.GetObject("btnServ.Image")));
             this.btnServ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,7 +252,7 @@
             this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +271,7 @@
             this.btnFacturacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnFacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturacion.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnFacturacion.ForeColor = System.Drawing.Color.White;
             this.btnFacturacion.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Image")));
             this.btnFacturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,12 +285,13 @@
             // btnInventario
             // 
             this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.btnInventario.ContextMenuStrip = this.menúInventario;
             this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,6 +303,40 @@
             this.btnInventario.UseVisualStyleBackColor = false;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
+            // menúInventario
+            // 
+            this.menúInventario.AllowMerge = false;
+            this.menúInventario.AutoSize = false;
+            this.menúInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.menúInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.menúInventario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menúInventario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productosDisponiblesToolStripMenuItem,
+            this.todosLosProductosToolStripMenuItem});
+            this.menúInventario.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menúInventario.Name = "menúInventario";
+            this.menúInventario.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menúInventario.ShowImageMargin = false;
+            this.menúInventario.Size = new System.Drawing.Size(150, 80);
+            this.menúInventario.TabStop = true;
+            // 
+            // productosDisponiblesToolStripMenuItem
+            // 
+            this.productosDisponiblesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.productosDisponiblesToolStripMenuItem.Name = "productosDisponiblesToolStripMenuItem";
+            this.productosDisponiblesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.productosDisponiblesToolStripMenuItem.Text = "Productos Disponibles";
+            this.productosDisponiblesToolStripMenuItem.Click += new System.EventHandler(this.productosDisponiblesToolStripMenuItem_Click);
+            // 
+            // todosLosProductosToolStripMenuItem
+            // 
+            this.todosLosProductosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.todosLosProductosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.todosLosProductosToolStripMenuItem.Name = "todosLosProductosToolStripMenuItem";
+            this.todosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.todosLosProductosToolStripMenuItem.Text = "Todos los productos";
+            this.todosLosProductosToolStripMenuItem.Click += new System.EventHandler(this.todosLosProductosToolStripMenuItem_Click);
+            // 
             // btnProveedores
             // 
             this.btnProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
@@ -303,7 +345,7 @@
             this.btnProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnProveedores.ForeColor = System.Drawing.Color.White;
             this.btnProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedores.Image")));
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +364,7 @@
             this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnUser.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -332,6 +374,15 @@
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "Clientes";
             this.btnUser.UseVisualStyleBackColor = false;
+            // 
+            // tTproducto
+            // 
+            this.tTproducto.AutomaticDelay = 300;
+            this.tTproducto.AutoPopDelay = 3000;
+            this.tTproducto.InitialDelay = 500;
+            this.tTproducto.IsBalloon = true;
+            this.tTproducto.ReshowDelay = 60;
+            this.tTproducto.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // FormMenu
             // 
@@ -357,6 +408,7 @@
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnmenu)).EndInit();
+            this.menúInventario.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -379,7 +431,11 @@
         public System.Windows.Forms.Button btnFacturacion;
         public System.Windows.Forms.Button btnInventario;
         public System.Windows.Forms.Button btnProveedores;
-        public System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnCerrarSesión;
+        public System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.ContextMenuStrip menúInventario;
+        private System.Windows.Forms.ToolStripMenuItem productosDisponiblesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem todosLosProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolTip tTproducto;
     }
 }
