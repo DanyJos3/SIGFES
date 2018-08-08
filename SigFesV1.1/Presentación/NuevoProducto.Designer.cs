@@ -36,7 +36,6 @@
             this.tBstock = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tBcodigo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,31 +50,34 @@
             this.tBmarca = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tBcodigo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 76);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 84);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(566, 504);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 488F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(555, 543);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -89,7 +91,6 @@
             this.tableLayoutPanel2.Controls.Add(this.tBstock, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.tBcodigo, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 7);
@@ -104,20 +105,21 @@
             this.tableLayoutPanel2.Controls.Add(this.tBmarca, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 4);
+            this.tableLayoutPanel2.Controls.Add(this.tBcodigo, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(38, 6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(479, 444);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(479, 482);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // label6
@@ -125,7 +127,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 44);
@@ -136,19 +138,19 @@
             // tBtipo
             // 
             this.tBtipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBtipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtipo.Location = new System.Drawing.Point(175, 98);
+            this.tBtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtipo.Location = new System.Drawing.Point(175, 99);
             this.tBtipo.Name = "tBtipo";
-            this.tBtipo.Size = new System.Drawing.Size(301, 23);
+            this.tBtipo.Size = new System.Drawing.Size(301, 21);
             this.tBtipo.TabIndex = 3;
             // 
             // tBstock
             // 
             this.tBstock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBstock.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBstock.Location = new System.Drawing.Point(175, 362);
+            this.tBstock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBstock.Location = new System.Drawing.Point(175, 401);
             this.tBstock.Name = "tBstock";
-            this.tBstock.Size = new System.Drawing.Size(301, 23);
+            this.tBstock.Size = new System.Drawing.Size(301, 21);
             this.tBstock.TabIndex = 9;
             // 
             // label3
@@ -156,7 +158,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 44);
@@ -170,7 +172,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 44);
@@ -178,35 +180,25 @@
             this.label2.Text = "Código :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tBcodigo
-            // 
-            this.tBcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBcodigo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBcodigo.Location = new System.Drawing.Point(175, 10);
-            this.tBcodigo.Name = "tBcodigo";
-            this.tBcodigo.Size = new System.Drawing.Size(301, 23);
-            this.tBcodigo.TabIndex = 1;
-            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 44);
+            this.label7.Size = new System.Drawing.Size(166, 82);
             this.label7.TabIndex = 6;
             this.label7.Text = "Descripción :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 264);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 302);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(166, 44);
             this.label8.TabIndex = 7;
@@ -218,8 +210,8 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 308);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 346);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(166, 44);
             this.label9.TabIndex = 8;
@@ -231,8 +223,8 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 352);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 390);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(166, 44);
             this.label10.TabIndex = 9;
@@ -244,8 +236,8 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 396);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 434);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(166, 48);
             this.label11.TabIndex = 10;
@@ -254,88 +246,79 @@
             // 
             // tBdescrip
             // 
-            this.tBdescrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBdescrip.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBdescrip.Location = new System.Drawing.Point(175, 230);
+            this.tBdescrip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBdescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBdescrip.Location = new System.Drawing.Point(175, 223);
+            this.tBdescrip.Multiline = true;
             this.tBdescrip.Name = "tBdescrip";
-            this.tBdescrip.Size = new System.Drawing.Size(301, 23);
+            this.tBdescrip.Size = new System.Drawing.Size(301, 76);
             this.tBdescrip.TabIndex = 6;
             // 
             // tBprecioCompra
             // 
             this.tBprecioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBprecioCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBprecioCompra.Location = new System.Drawing.Point(175, 274);
+            this.tBprecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBprecioCompra.Location = new System.Drawing.Point(175, 313);
             this.tBprecioCompra.Name = "tBprecioCompra";
-            this.tBprecioCompra.Size = new System.Drawing.Size(301, 23);
+            this.tBprecioCompra.Size = new System.Drawing.Size(301, 21);
             this.tBprecioCompra.TabIndex = 7;
             // 
             // cBcategoria
             // 
             this.cBcategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBcategoria.FormattingEnabled = true;
             this.cBcategoria.Items.AddRange(new object[] {
-            "Suministros de Oficina",
-            "Dispositivos Electrónicos",
-            "Software",
-            "Repuestos"});
+            ""});
             this.cBcategoria.Location = new System.Drawing.Point(175, 47);
             this.cBcategoria.Name = "cBcategoria";
-            this.cBcategoria.Size = new System.Drawing.Size(301, 21);
+            this.cBcategoria.Size = new System.Drawing.Size(301, 23);
             this.cBcategoria.TabIndex = 2;
             // 
             // cBunidadMedida
             // 
             this.cBunidadMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBunidadMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBunidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBunidadMedida.FormattingEnabled = true;
-            this.cBunidadMedida.Items.AddRange(new object[] {
-            "Cajas",
-            "Resmas",
-            "Unidades",
-            "Litros",
-            "Galones"});
-            this.cBunidadMedida.Location = new System.Drawing.Point(175, 311);
+            this.cBunidadMedida.Location = new System.Drawing.Point(175, 349);
             this.cBunidadMedida.Name = "cBunidadMedida";
-            this.cBunidadMedida.Size = new System.Drawing.Size(301, 21);
+            this.cBunidadMedida.Size = new System.Drawing.Size(301, 23);
             this.cBunidadMedida.TabIndex = 8;
             // 
             // cBproveedor
             // 
             this.cBproveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBproveedor.FormattingEnabled = true;
-            this.cBproveedor.Items.AddRange(new object[] {
-            "ELAC",
-            "MACROSOLUTIONS",
-            "EBAY",
-            "SASHIMPORT",
-            "UNISCAN ",
-            "COMERCIAL ARAUJO",
-            "CompuPaper",
-            "SOPRINT"});
-            this.cBproveedor.Location = new System.Drawing.Point(175, 399);
+            this.cBproveedor.Location = new System.Drawing.Point(175, 437);
             this.cBproveedor.Name = "cBproveedor";
-            this.cBproveedor.Size = new System.Drawing.Size(301, 21);
+            this.cBproveedor.Size = new System.Drawing.Size(301, 23);
             this.cBproveedor.TabIndex = 10;
             // 
             // tBserie
             // 
             this.tBserie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBserie.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBserie.Location = new System.Drawing.Point(175, 186);
+            this.tBserie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBserie.Location = new System.Drawing.Point(175, 187);
             this.tBserie.Name = "tBserie";
-            this.tBserie.Size = new System.Drawing.Size(301, 23);
+            this.tBserie.Size = new System.Drawing.Size(301, 21);
             this.tBserie.TabIndex = 5;
             // 
             // tBmarca
             // 
             this.tBmarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBmarca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBmarca.Location = new System.Drawing.Point(175, 142);
+            this.tBmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBmarca.Location = new System.Drawing.Point(175, 143);
             this.tBmarca.Name = "tBmarca";
-            this.tBmarca.Size = new System.Drawing.Size(301, 23);
+            this.tBmarca.Size = new System.Drawing.Size(301, 21);
             this.tBmarca.TabIndex = 4;
             // 
             // label5
@@ -343,7 +326,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 44);
@@ -356,7 +339,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 44);
@@ -364,15 +347,26 @@
             this.label4.Text = "Marca :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tBcodigo
+            // 
+            this.tBcodigo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tBcodigo.Enabled = false;
+            this.tBcodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBcodigo.Location = new System.Drawing.Point(367, 7);
+            this.tBcodigo.Name = "tBcodigo";
+            this.tBcodigo.Size = new System.Drawing.Size(109, 29);
+            this.tBcodigo.TabIndex = 1;
+            this.tBcodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.btnCancelar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnRegistrar, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(165, 458);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(160, 497);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -419,6 +413,7 @@
             // panelTitulo
             // 
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelTitulo.Controls.Add(this.pictureBox1);
             this.panelTitulo.Controls.Add(this.label1);
             this.panelTitulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -441,25 +436,36 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(105, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 63);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // NuevoProducto
             // 
             this.AcceptButton = this.btnRegistrar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(566, 580);
-            this.Controls.Add(this.panelTitulo);
+            this.ClientSize = new System.Drawing.Size(566, 630);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoProducto";
+            this.Load += new System.EventHandler(this.NuevoProducto_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NuevoProducto_MouseDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,5 +499,6 @@
         private System.Windows.Forms.TextBox tBmarca;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tBtipo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

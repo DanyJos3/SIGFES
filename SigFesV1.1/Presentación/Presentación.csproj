@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1Proveedores.cs">
+    <Compile Include="AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1Proveedores.Designer.cs">
-      <DependentUpon>Form1Proveedores.cs</DependentUpon>
+    <Compile Include="AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DarBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DarBaja.Designer.cs">
+      <DependentUpon>DarBaja.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -95,8 +101,11 @@
     <Compile Include="TodosProductos.Designer.cs">
       <DependentUpon>TodosProductos.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1Proveedores.resx">
-      <DependentUpon>Form1Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DarBaja.resx">
+      <DependentUpon>DarBaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

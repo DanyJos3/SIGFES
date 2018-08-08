@@ -30,6 +30,7 @@ namespace Datos
             cmd.CommandText = sql;
             
             leer = cmd.ExecuteReader();
+            cmd.Connection = conn.cerrarConexión();
             return leer;
         }
 
@@ -42,9 +43,9 @@ namespace Datos
             cmd.Parameters.AddWithValue("@pass",pass);
 
             leer = cmd.ExecuteReader();
-
-
+            
             return leer;
+            cmd.Connection = conn.cerrarConexión();
         }
     }
 }
