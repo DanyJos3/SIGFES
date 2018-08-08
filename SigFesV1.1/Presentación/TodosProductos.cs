@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Vista
+namespace Presentación
+
 {
 
-   
+
 
     public partial class TodosProductos : Form
     {
@@ -31,6 +32,27 @@ namespace Vista
         private void TodosProductos_Load(object sender, EventArgs e)
         {
             mostarTodos();
+        }
+
+        private void dGVproductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            if (this.dGVproductos.Columns[e.ColumnIndex].Name == "Estado")
+            {
+                if ((Convert.ToString(e.Value).Trim()).Equals("inactivo"))
+                {
+
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.DarkRed;
+
+                }
+                else if ((Convert.ToString(e.Value).Trim()).Equals("activo"))
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.LimeGreen;
+                }
+
+            }
         }
     }
 }
