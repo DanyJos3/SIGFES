@@ -15,7 +15,7 @@ namespace Datos
 
         public Conexión()
         {
-            con = new SqlConnection("Server=DESKTOP-K50DGKN; DataBase=SIGFES; user id = sa; password = sqlP@ss");
+            con = new SqlConnection("Server=192.170.0.2 ; DataBase=SIGFES; Integrated Security=false");
         }
 
         public SqlConnection abrirConexión()
