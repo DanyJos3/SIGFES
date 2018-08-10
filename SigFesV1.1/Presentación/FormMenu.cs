@@ -106,94 +106,23 @@ namespace Presentación
 
                 MenuVertical.Width = 57;
         }
-        private void btnPRODUCTOS_Click(object sender, EventArgs e)
-        {
-
-            //FormProductos frm = new FormProductos();
-            //frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
-            //AbrirFormInPanel(frm);
-
-        }
-
-        public void btnINICIO_Click(object sender, EventArgs e)
-        {
-            //AbrirFormInPanel(new FormLogo());
-        }
+        
          
 
         private void Form1_Load(object sender, EventArgs e)
         {
             mostrarlogo();
         }
+
+
         private void mostrarlogo() {
             AbrirFormInPanel(new FormSello());
-        }
-
-        private void btnCuenta_Click(object sender, EventArgs e)
-        {
-
-            //formventa frm = new formventa();
-            //frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
-
-            //AbrirFormInPanel(datosUsuarios);
         }
 
         private void mostrarlogoAlCerrarForm(object sender, FormClosedEventArgs e) {
             mostrarlogo();
         }
-
-        private void btnVENTAS_Click(object sender, EventArgs e)
-        {
-            //formventa frm = new formventa();
-            //frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
-            //AbrirFormInPanel(frm);
-        }
-        //protected override void WndProc(ref Message msj)
-        //{
-        //    const int CoordenadaWFP = 0x84; //Ubicacion de la parte derecha inferior del form
-        //    const int DesIzquierda = 16;
-        //    const int DesDerecha = 17;
-        //    if (msj.Msg == CoordenadaWFP)
-        //    {
-        //        int x = (int)(msj.LParam.ToInt64() & 0xFFFF);
-        //        int y = (int)((msj.LParam.ToInt64() & 0xFFFF0000) >> 16);
-        //        Point CoordenadaArea = PointToClient(new Point(x, y));
-        //        Size TamañoAreaForm = ClientSize;
-        //        if (CoordenadaArea.X >= TamañoAreaForm.Width - 16 && CoordenadaArea.Y >= TamañoAreaForm.Height - 16 && TamañoAreaForm.Height >= 16)
-        //        {
-        //            msj.Result = (IntPtr)(IsMirrored ? DesIzquierda : DesDerecha);
-        //            return;
-        //        }
-        //    }
-        //    base.WndProc(ref msj);
-        //}
-
-
-
-
-
-
-        ////OPCION 2 SIN PANELES -FORM SIMPLE 
-        //protected override void WndProc(ref Message msj)
-        //{
-        //    const int CoordenadaWFP = 0x84; //ibicacion de la parte derecha inferior del form
-        //    const int DesIzquierda = 16;
-        //    const int DesDerecha = 17;
-        //    if (msj.Msg == CoordenadaWFP)
-        //    {
-        //        int x = (int)(msj.LParam.ToInt64() & 0xFFFF);
-        //        int y = (int)((msj.LParam.ToInt64() & 0xFFFF0000) >> 16);
-        //        Point CoordenadaArea = PointToClient(new Point(x, y));
-        //        Size TamañoAreaForm = ClientSize;
-        //        if (CoordenadaArea.X >= TamañoAreaForm.Width - 16 && CoordenadaArea.Y >= TamañoAreaForm.Height - 16 && TamañoAreaForm.Height >= 16)
-        //        {
-        //            msj.Result = (IntPtr)(IsMirrored ? DesIzquierda : DesDerecha);
-        //            return;
-        //        }
-        //    }
-        //    base.WndProc(ref msj);
-        //}
-
+        
         //OPCION 2 CON PANELES
         //METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO  TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 15;
@@ -210,10 +139,26 @@ namespace Presentación
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
+
+            this.tTproducto.SetToolTip(btnInventario, "Clic derecho y escoga una opción");
+            //tTproducto.Show("Clic derecho y escoga una opción",btnInventario);
+           
+        }
+
+        private void productosDisponiblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             FormProductos frm = new FormProductos();
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
+            
+        }
 
+        private void todosLosProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            TodosProductos frm = new TodosProductos();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -246,6 +191,8 @@ namespace Presentación
                     break;
             }
         }
+
+
         //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
         protected override void OnSizeChanged(EventArgs e)
         {

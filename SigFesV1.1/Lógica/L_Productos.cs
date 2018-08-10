@@ -11,22 +11,59 @@ namespace Lógica
 {
     public class L_Productos
     {
-        private D_Productos productosCD;
-
+        private D_Productos productosCD = new D_Productos();
+        private DataTable tabla;
 
         public DataTable MostrarProd()
         {
-            productosCD = new D_Productos();
-            DataTable tabla = new DataTable();
-            tabla = productosCD.mostrarTodos();
+            tabla = new DataTable();
+            tabla = productosCD.listar("SPmostrarProductosTodos");
+            return tabla;
+        }
+
+        public DataTable mostrarCategorias()
+        {
+            tabla = new DataTable();
+            tabla = productosCD.listar("SPcategorias");
 
             return tabla;
         }
 
+        public DataTable mostrarUnidades()
+        {
+            tabla = new DataTable();
+            tabla = productosCD.listar("SPunidades");
+            return tabla;
+        }
+
+        public DataTable mostrarProveedores()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = productosCD.listar("SPproveedores");
+            return tabla;
+        }
+
+        public String obtenerCod()
+        {
+            String codigo;
+            codigo = productosCD.nuevoCodigo();
+            return codigo;
+        }
+
+       
+
         public void insertarProducto(E_Producto objProducto)
         {
-            productosCD = new D_Productos();
-            productosCD.insertarProducto(objProducto);
+            productosCD.insertarProducto(objProducto,"SPinsertarProducto");
         }
+
+        public void modificarProducto(E_Producto objProducto)
+        {
+            productosCD.modificarProducto(objProducto,"SPmodificarProducto1");
+        }
+
+
     }
+
 }
