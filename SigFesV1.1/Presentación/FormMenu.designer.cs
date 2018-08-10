@@ -213,6 +213,7 @@
             this.btnServ.TabIndex = 11;
             this.btnServ.Text = "Servicios";
             this.btnServ.UseVisualStyleBackColor = true;
+            this.btnServ.Click += new System.EventHandler(this.btnServ_Click);
             // 
             // btnmenu
             // 
@@ -255,6 +256,7 @@
             this.btnReportes.TabIndex = 9;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnFacturacion
             // 

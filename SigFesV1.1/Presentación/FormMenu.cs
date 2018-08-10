@@ -204,8 +204,8 @@ namespace Presentación
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin frmlogin = new FormLogin();
-            frmlogin.Show();
+          //  FormLogin frmlogin = new FormLogin();
+          //  frmlogin.Show();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -214,6 +214,21 @@ namespace Presentación
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
 
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FormReporte frm = new FormReporte();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+         
+        }
+
+        private void btnServ_Click(object sender, EventArgs e)
+        {
+            FormServicios frm = new FormServicios();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
         }
 
         protected override void WndProc(ref Message m)
