@@ -63,6 +63,30 @@
     <Compile Include="FormMenu.designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarJuridico.Designer.cs">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarNatural.Designer.cs">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoJuridico.Designer.cs">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoNatural.Designer.cs">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarJuridico.resx">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarNatural.resx">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoJuridico.resx">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoNatural.resx">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
