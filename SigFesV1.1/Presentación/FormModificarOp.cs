@@ -9,15 +9,24 @@ using System.Windows.Forms;
 
 namespace Presentación
 {
-    public partial class FormModificarNatural : Form
+    public partial class FormModificarOp : Form
     {
-        public FormModificarNatural()
+        public FormModificarOp()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormModificarNatural frm = new FormModificarNatural();
+            frm.Show();
+            this.Dispose();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
+            FormModificarJuridico frm1 = new FormModificarJuridico();
+            frm1.Show();
             this.Dispose();
         }
     }

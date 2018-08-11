@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Vista
+namespace Presentación
 {
     public partial class FormNuevoNatural : Form
     {
@@ -16,19 +16,9 @@ namespace Vista
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

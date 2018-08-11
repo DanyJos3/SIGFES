@@ -1,4 +1,4 @@
-﻿namespace Vista
+﻿namespace Presentación
 {
     partial class FormModificarJuridico
     {
@@ -282,6 +282,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -294,14 +295,14 @@
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // FormModificarNatural
+            // FormModificarJuridico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 531);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormModificarNatural";
+            this.Name = "FormModificarJuridico";
             this.Text = "FormModificarNatural";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

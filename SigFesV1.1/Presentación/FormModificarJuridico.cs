@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Vista
+namespace Presentación
 {
     public partial class FormModificarJuridico : Form
     {
         public FormModificarJuridico()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
