@@ -281,6 +281,7 @@
             this.btnFacturacion.TabIndex = 7;
             this.btnFacturacion.Text = "Facturación";
             this.btnFacturacion.UseVisualStyleBackColor = false;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
             // 
             // btnInventario
             // 
@@ -416,7 +417,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelprincipal;
-        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnmenu;
@@ -437,5 +437,6 @@
         private System.Windows.Forms.ToolStripMenuItem productosDisponiblesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem todosLosProductosToolStripMenuItem;
         private System.Windows.Forms.ToolTip tTproducto;
+        public System.Windows.Forms.Panel panelContenedor;
     }
 }

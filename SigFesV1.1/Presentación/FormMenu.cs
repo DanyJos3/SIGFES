@@ -21,8 +21,11 @@ namespace Presentación
         public FormMenu()
         {
             InitializeComponent();
-           
-            
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            iconmaximizar.Visible = false;
+            iconrestaurar.Visible = true;
+
         }
 
 
@@ -69,10 +72,10 @@ namespace Presentación
             //Para guardar la posicion del tamaño con el que inicia
             //Esto no sirve luego para el restaurar.
 
-            LX = this.Location.X;
-            LY = this.Location.Y;
-            SW = this.Size.Width;
-            SH = this.Size.Height;
+            //LX = this.Location.X;
+            //LY = this.Location.Y;
+            //SW = this.Size.Width;
+            //SH = this.Size.Height;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             iconmaximizar.Visible = false;
@@ -81,9 +84,9 @@ namespace Presentación
 
         private void iconrestaurar_Click(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Normal;
-            this.Size = new Size(SW, SH);
-            this.Location = new Point(LX,LY);
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(1120, 650);
+            this.Location = new Point(50,50);
             iconmaximizar.Visible = true;
             iconrestaurar.Visible = false;
         }
@@ -157,6 +160,13 @@ namespace Presentación
         {
             
             TodosProductos frm = new TodosProductos();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void btnFacturacion_Click(object sender, EventArgs e)
+        {
+            FormFactura frm = new FormFactura(this);
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
         }
