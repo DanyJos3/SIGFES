@@ -45,11 +45,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tableLayoutPanelPrincipal.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -70,12 +70,12 @@
             this.tableLayoutPanelPrincipal.ColumnCount = 1;
             this.tableLayoutPanelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelPrincipal.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelPrincipal.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanelPrincipal.Controls.Add(this.tableLayoutPanel2, 0, 4);
             this.tableLayoutPanelPrincipal.Controls.Add(this.button5, 0, 5);
             this.tableLayoutPanelPrincipal.Controls.Add(this.dataGridView1, 0, 2);
             this.tableLayoutPanelPrincipal.Controls.Add(this.tableLayoutPanel4, 0, 3);
+            this.tableLayoutPanelPrincipal.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelPrincipal.Location = new System.Drawing.Point(16, 15);
             this.tableLayoutPanelPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanelPrincipal.Name = "tableLayoutPanelPrincipal";
@@ -125,7 +125,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.68421F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.31579F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 601F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 0);
@@ -148,10 +148,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(978, 14);
+            this.button1.Location = new System.Drawing.Point(977, 14);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 35);
+            this.button1.Size = new System.Drawing.Size(104, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "Buscar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,7 +163,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(377, 18);
+            this.textBox1.Location = new System.Drawing.Point(376, 18);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(593, 27);
@@ -179,7 +179,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Cedula de identidad",
             "Nombre"});
-            this.comboBox1.Location = new System.Drawing.Point(186, 19);
+            this.comboBox1.Location = new System.Drawing.Point(185, 18);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(183, 26);
@@ -198,7 +198,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(176, 57);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(175, 57);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // radioButton1
@@ -207,7 +207,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(3, 31);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(170, 22);
+            this.radioButton1.Size = new System.Drawing.Size(169, 22);
             this.radioButton1.TabIndex = 6;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "persona juridica";
@@ -221,7 +221,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(3, 3);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(170, 22);
+            this.radioButton2.Size = new System.Drawing.Size(169, 22);
             this.radioButton2.TabIndex = 7;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "persona natural";
@@ -266,6 +266,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(4, 4);
@@ -339,6 +340,28 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(178, 58);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button6.Location = new System.Drawing.Point(3, 32);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(172, 23);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Persona Juridica";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button4.Location = new System.Drawing.Point(3, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(172, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Persona Natural";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
@@ -353,38 +376,9 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(178, 58);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(3, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Persona Natural";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(3, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(172, 23);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Persona Juridica";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(172, 23);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Persona Natural";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button8
             // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.button8.Location = new System.Drawing.Point(3, 32);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(172, 23);
@@ -392,6 +386,17 @@
             this.button8.Text = "Persona Juridica";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.button7.Location = new System.Drawing.Point(3, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(172, 23);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Persona Natural";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // FormCliente
             // 

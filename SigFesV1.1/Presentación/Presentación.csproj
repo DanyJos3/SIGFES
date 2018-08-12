@@ -75,12 +75,6 @@
     <Compile Include="FormModificarNatural.Designer.cs">
       <DependentUpon>FormModificarNatural.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModificarOp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormModificarOp.Designer.cs">
-      <DependentUpon>FormModificarOp.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormNuevoJuridico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,12 +86,6 @@
     </Compile>
     <Compile Include="FormNuevoNatural.Designer.cs">
       <DependentUpon>FormNuevoNatural.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNuevoOp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNuevoOp.Designer.cs">
-      <DependentUpon>FormNuevoOp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
@@ -128,17 +116,11 @@
     <EmbeddedResource Include="FormModificarNatural.resx">
       <DependentUpon>FormModificarNatural.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModificarOp.resx">
-      <DependentUpon>FormModificarOp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoJuridico.resx">
       <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoNatural.resx">
       <DependentUpon>FormNuevoNatural.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNuevoOp.resx">
-      <DependentUpon>FormNuevoOp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
@@ -154,6 +136,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +160,9 @@
       <Project>{d0becdec-a4ff-41c1-b3bd-9259f4a95b2c}</Project>
       <Name>Lógica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
