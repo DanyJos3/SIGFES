@@ -89,5 +89,7 @@ namespace Presentación
             //frm.tBcantidad.Text = dGVproductos.CurrentRow.Cells[8].Value.ToString();
             frm.Show();
         }
+
+       
     }
 }
