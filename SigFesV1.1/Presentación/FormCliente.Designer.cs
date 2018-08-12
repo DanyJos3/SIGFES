@@ -82,8 +82,8 @@
             this.tableLayoutPanelPrincipal.RowCount = 6;
             this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.73653F));
             this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.26347F));
-            this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 235F));
-            this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
+            this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tableLayoutPanelPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanelPrincipal.Size = new System.Drawing.Size(1101, 604);
@@ -308,7 +308,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1093, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(1093, 217);
             this.dataGridView1.TabIndex = 5;
             // 
             // tableLayoutPanel4
@@ -319,11 +319,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(366, 433);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(362, 424);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(368, 64);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(377, 72);
             this.tableLayoutPanel4.TabIndex = 10;
             // 
             // tableLayoutPanel5
@@ -337,13 +337,13 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(178, 58);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(182, 66);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button6.Location = new System.Drawing.Point(3, 32);
+            this.button6.Location = new System.Drawing.Point(3, 36);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(172, 23);
             this.button6.TabIndex = 1;
@@ -368,18 +368,18 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.button8, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(187, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(191, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(178, 58);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(183, 66);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button8.Location = new System.Drawing.Point(3, 32);
+            this.button8.Location = new System.Drawing.Point(3, 36);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(172, 23);
             this.button8.TabIndex = 2;
