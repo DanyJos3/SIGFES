@@ -136,8 +136,8 @@ namespace Presentación
         private void btnCerrarSesión_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin frmlogin = new FormLogin();
-            frmlogin.Show();
+          //  FormLogin frmlogin = new FormLogin();
+          //  frmlogin.Show();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -160,13 +160,6 @@ namespace Presentación
         {
             
             TodosProductos frm = new TodosProductos();
-            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
-            AbrirFormInPanel(frm);
-        }
-
-        private void btnFacturacion_Click(object sender, EventArgs e)
-        {
-            FormFactura frm = new FormFactura(this);
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
         }

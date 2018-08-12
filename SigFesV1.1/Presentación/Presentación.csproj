@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarProducto.cs">
+    <Compile Include="FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarProducto.Designer.cs">
-      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    <Compile Include="FormCliente.Designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="DarBaja.cs">
       <SubType>Form</SubType>
@@ -75,6 +75,42 @@
     <Compile Include="FormMenu.designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarJuridico.Designer.cs">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarNatural.Designer.cs">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarFactura.Designer.cs">
+      <DependentUpon>ModificarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoJuridico.Designer.cs">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaVenta.Designer.cs">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoNatural.Designer.cs">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,43 +123,10 @@
     <Compile Include="FormSello.Designer.cs">
       <DependentUpon>FormSello.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModificarFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarFactura.Designer.cs">
-      <DependentUpon>ModificarFactura.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarProducto.Designer.cs">
-      <DependentUpon>ModificarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NuevaVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NuevaVenta.Designer.cs">
-      <DependentUpon>NuevaVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NuevoProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NuevoProducto.Designer.cs">
-      <DependentUpon>NuevoProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TodosProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TodosProductos.Designer.cs">
-      <DependentUpon>TodosProductos.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AgregarProducto.resx">
-      <DependentUpon>AgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DarBaja.resx">
-      <DependentUpon>DarBaja.cs</DependentUpon>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFactura.resx">
       <DependentUpon>FormFactura.cs</DependentUpon>
@@ -133,6 +136,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarJuridico.resx">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarNatural.resx">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoJuridico.resx">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoNatural.resx">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
@@ -160,10 +175,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TodosProductos.resx">
-      <DependentUpon>TodosProductos.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,6 +199,9 @@
       <Project>{d0becdec-a4ff-41c1-b3bd-9259f4a95b2c}</Project>
       <Name>Lógica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
