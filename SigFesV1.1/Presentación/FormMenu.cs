@@ -176,6 +176,13 @@ namespace Presentación
             AbrirFormInPanel(frm);
         }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            FormCliente frm = new FormCliente();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
