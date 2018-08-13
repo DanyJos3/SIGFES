@@ -40,9 +40,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tBunidad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tBcantidad1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -65,7 +68,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,35 +77,38 @@
             // 
             // tBmarca
             // 
-            this.tBmarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBmarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tBmarca.Enabled = false;
-            this.tBmarca.Location = new System.Drawing.Point(86, 65);
+            this.tBmarca.Location = new System.Drawing.Point(122, 65);
             this.tBmarca.Name = "tBmarca";
-            this.tBmarca.Size = new System.Drawing.Size(130, 20);
+            this.tBmarca.Size = new System.Drawing.Size(160, 20);
             this.tBmarca.TabIndex = 13;
             // 
             // tbTipo
             // 
-            this.tbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbTipo.Enabled = false;
-            this.tbTipo.Location = new System.Drawing.Point(86, 32);
+            this.tbTipo.Location = new System.Drawing.Point(122, 34);
             this.tbTipo.Name = "tbTipo";
-            this.tbTipo.Size = new System.Drawing.Size(130, 20);
+            this.tbTipo.Size = new System.Drawing.Size(160, 20);
             this.tbTipo.TabIndex = 12;
             // 
             // tBcantidad
             // 
             this.tBcantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBcantidad.Location = new System.Drawing.Point(86, 100);
+            this.tBcantidad.Location = new System.Drawing.Point(283, 184);
             this.tBcantidad.Name = "tBcantidad";
-            this.tBcantidad.Size = new System.Drawing.Size(130, 21);
+            this.tBcantidad.Size = new System.Drawing.Size(160, 21);
             this.tBcantidad.TabIndex = 7;
+            this.tBcantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBcantidad_KeyPress);
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 56);
+            this.label4.Location = new System.Drawing.Point(3, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 21);
             this.label4.TabIndex = 10;
@@ -122,15 +128,15 @@
             this.tBcodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tBcodigo.Enabled = false;
             this.tBcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBcodigo.Location = new System.Drawing.Point(153, 3);
+            this.tBcodigo.Location = new System.Drawing.Point(202, 3);
             this.tBcodigo.Name = "tBcodigo";
-            this.tBcodigo.Size = new System.Drawing.Size(63, 21);
+            this.tBcodigo.Size = new System.Drawing.Size(80, 21);
             this.tBcodigo.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 29);
+            this.label3.Location = new System.Drawing.Point(3, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 25);
             this.label3.TabIndex = 9;
@@ -139,7 +145,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 94);
+            this.label5.Location = new System.Drawing.Point(164, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 11;
@@ -148,26 +154,45 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.35616F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.64384F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
+            this.tableLayoutPanel1.Controls.Add(this.tBunidad, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tBcodigo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tBcantidad, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tbTipo, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tBmarca, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(199, 66);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(161, 54);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.05479F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.94521F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(219, 127);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 127);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // tBunidad
+            // 
+            this.tBunidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBunidad.Enabled = false;
+            this.tBunidad.Location = new System.Drawing.Point(122, 96);
+            this.tBunidad.Multiline = true;
+            this.tBunidad.Name = "tBunidad";
+            this.tBunidad.Size = new System.Drawing.Size(160, 20);
+            this.tBunidad.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 34);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Unidad de Medida:";
             // 
             // btnCancelar
             // 
@@ -203,26 +228,40 @@
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnAdd);
             this.flowLayoutPanel1.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(109, 211);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(109, 234);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(247, 43);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // tBcantidad1
+            // 
+            this.tBcantidad1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBcantidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBcantidad1.Location = new System.Drawing.Point(283, 184);
+            this.tBcantidad1.Name = "tBcantidad1";
+            this.tBcantidad1.Size = new System.Drawing.Size(160, 21);
+            this.tBcantidad1.TabIndex = 12;
+            this.tBcantidad1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBcantidad1_KeyPress);
             // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(470, 260);
+            this.ClientSize = new System.Drawing.Size(470, 289);
+            this.Controls.Add(this.tBcantidad1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tBcantidad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -232,6 +271,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -251,5 +291,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.TextBox tBmarca;
         public System.Windows.Forms.TextBox tbTipo;
+        public System.Windows.Forms.TextBox tBunidad;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox tBcantidad1;
     }
 }

@@ -123,6 +123,9 @@ namespace Presentación
             cBproveedor.ValueMember = "idProveedor";
         }
 
-       
+        private void cBcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

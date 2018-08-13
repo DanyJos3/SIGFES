@@ -21,6 +21,13 @@ namespace Lógica
             return tabla;
         }
 
+        public DataTable MostrarProdDisponibles()
+        {
+            tabla = new DataTable();
+            tabla = productosCD.listar("SPmostrarProductosDisponibles");
+            return tabla;
+        }
+
         public DataTable mostrarCategorias()
         {
             tabla = new DataTable();
@@ -63,6 +70,40 @@ namespace Lógica
             productosCD.modificarProducto(objProducto,"SPmodificarProducto1");
         }
 
+        public void modificarStock(int codigo, string cantidad)
+        {
+            productosCD.modificarStock(codigo, cantidad, "SPmodificarStock");
+        }
+
+        public void inhabilitar(int codigo)
+        {
+            productosCD.cambiarEstado(codigo, "SPinhabilitar");
+        }
+        public void habilitar(int codigo)
+        {
+            productosCD.cambiarEstado(codigo, "SPhabilitar");
+        }
+
+
+        //Busquedas.....
+        public DataTable buscarPorCod(String parametro)
+        {
+            tabla = new DataTable();
+            tabla = productosCD.buscar(parametro,"SPbuscarPorCod");
+            return tabla;
+        }
+        public DataTable buscarPorCategoria(String parametro)
+        {
+            tabla = new DataTable();
+            tabla = productosCD.buscar(parametro,"SPbuscarPorCategoria");
+            return tabla;
+        }
+        public DataTable buscarPorTipo(String parametro)
+        {
+            tabla = new DataTable();
+            tabla = productosCD.buscar(parametro,"SPbuscarPorTipo");
+            return tabla;
+        }
 
     }
 

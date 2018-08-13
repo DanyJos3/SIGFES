@@ -171,6 +171,27 @@ namespace Presentación
             AbrirFormInPanel(frm);
         }
 
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            FormCliente frm = new FormCliente();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FormReporte frm = new FormReporte();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void btnServ_Click(object sender, EventArgs e)
+        {
+            FormServicios frm = new FormServicios();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)

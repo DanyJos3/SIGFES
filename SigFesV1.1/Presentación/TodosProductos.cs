@@ -54,5 +54,25 @@ namespace Presentación
 
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dGVproductos.SelectedRows.Count > 0)
+            {
+                int auxStock = Convert.ToInt32(dGVproductos.CurrentRow.Cells[8].Value.ToString());
+                if (auxStock == 0)
+                {
+                    productoCN.habilitar(Convert.ToInt32(dGVproductos.CurrentRow.Cells[0].Value.ToString()));
+                    MessageBox.Show("Producto Habilitado", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    mostarTodos();
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -51,7 +51,26 @@ namespace Datos
             return tabla;
         }
 
-        
+
+        public DataTable buscar(string parametro, string procedimiento)
+        {
+            tabla = new DataTable();
+            //tabla.Clear();
+            comd.Connection = conn.abrirConexión();
+            comd.CommandText = procedimiento.Trim();
+            comd.CommandType = CommandType.StoredProcedure;
+            comd.Parameters.AddWithValue("@parametro", parametro);
+
+            leerFilas = comd.ExecuteReader();//Devuelve filas
+            tabla.Load(leerFilas);
+
+            leerFilas.Close(); //Cierra el reader para que no haya problemas
+
+            comd.Parameters.Clear();
+            conn.cerrarConexión();
+            return tabla;
+        }
+
 
 
 
@@ -112,10 +131,54 @@ namespace Datos
                 MessageBox.Show("" + ex, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
+            
         }
 
+        public void modificarStock(int codigo, string cantidad, String procedimiento) 
+        {
+            comd.Connection = conn.abrirConexión();
+            comd.CommandText = procedimiento;
+            comd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                
+                comd.Parameters.AddWithValue("@codigo", codigo);
+                comd.Parameters.AddWithValue("@cantidad", cantidad);
 
+                comd.ExecuteNonQuery();
+                comd.Parameters.Clear();
+                comd.Connection = conn.cerrarConexión();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void cambiarEstado(int codigo, String procedimiento)
+        {
+            comd.Connection = conn.abrirConexión();
+            comd.CommandText = procedimiento;
+            comd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+
+                comd.Parameters.AddWithValue("@codigo", codigo);
+
+                comd.ExecuteNonQuery();
+                comd.Parameters.Clear();
+                comd.Connection = conn.cerrarConexión();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+      
+        
 
 
 

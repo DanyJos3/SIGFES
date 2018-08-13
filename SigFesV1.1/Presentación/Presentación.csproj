@@ -57,6 +57,12 @@
     <Compile Include="DarBaja.Designer.cs">
       <DependentUpon>DarBaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCliente.designer.cs">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,17 +81,53 @@
     <Compile Include="FormMenu.designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarJuridico.designer.cs">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarNatural.designer.cs">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoJuridico.designer.cs">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoNatural.designer.cs">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProductos.designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporte.designer.cs">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSello.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSello.Designer.cs">
       <DependentUpon>FormSello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicios.designer.cs">
+      <DependentUpon>FormServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarFactura.cs">
       <SubType>Form</SubType>
@@ -125,6 +167,9 @@
     <EmbeddedResource Include="DarBaja.resx">
       <DependentUpon>DarBaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCliente.resx">
+      <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFactura.resx">
       <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,11 +179,29 @@
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarJuridico.resx">
+      <DependentUpon>FormModificarJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarNatural.resx">
+      <DependentUpon>FormModificarNatural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoJuridico.resx">
+      <DependentUpon>FormNuevoJuridico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoNatural.resx">
+      <DependentUpon>FormNuevoNatural.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReporte.resx">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSello.resx">
       <DependentUpon>FormSello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicios.resx">
+      <DependentUpon>FormServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarFactura.resx">
       <DependentUpon>ModificarFactura.cs</DependentUpon>
