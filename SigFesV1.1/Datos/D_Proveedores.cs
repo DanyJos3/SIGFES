@@ -35,6 +35,8 @@ namespace Datos
         }
 
 
+
+
         public DataTable buscar(string parametro, string procedimiento)
         {
             tabla = new DataTable();

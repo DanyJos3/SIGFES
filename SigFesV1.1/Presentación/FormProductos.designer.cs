@@ -165,7 +165,6 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnBuscar.Enabled = false;
             this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

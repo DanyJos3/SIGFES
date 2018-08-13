@@ -17,7 +17,7 @@ namespace Presentación
     {
         private E_Producto objProducto = new E_Producto();
         private L_Productos productoCN = new L_Productos();
-        
+
 
 
         public NuevoProducto()
@@ -126,6 +126,70 @@ namespace Presentación
         private void cBcategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tBmarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char[] NoPermitir = { '-', '_', 'é', 'ý', 'ú', 'í', 'ñ', 'ó', 'á', 'ë', 'ÿ', 'ü', 'ï', 'ö', 'ä', 'ê', 'û', 'î', 'ô', 'â' };
+            char[] Permitir = {  };
+
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten caráceteres ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+            
+        }
+
+        private void tBserie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+                char[] NoPermitir = { '-', '_', 'é', 'ý', 'ú', 'í', 'ñ', 'ó', 'á', 'ë', 'ÿ', 'ü', 'ï', 'ö', 'ä', 'ê', 'û', 'î', 'ô', 'â' };
+                char[] Permitir = {  };
+
+                if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsNumber(e.KeyChar)))
+                {
+                    MessageBox.Show("Solo se permiten letras y números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    e.Handled = true;
+                    return;
+                }
+               
+            
+        }
+
+        private void tBstock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+
+            bool IsDec = false;
+            int nroDec = 0;
+
+            for (int i = 0; i < tBstock.Text.Length; i++)
+            {
+                if (tBstock.Text[i] == ',')
+                    IsDec = true;
+
+                if (IsDec && nroDec++ >= 2)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Solo se permiten 2 decimales", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 44)
+                e.Handled = (IsDec) ? true : false;
+            else
+                e.Handled = true;
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Entidades;
 using Lógica;
-
+using System.Runtime.InteropServices;
 
 namespace Presentación
 {
@@ -19,7 +19,6 @@ namespace Presentación
     {
         private E_Proveedores objProveedor = new E_Proveedores();
         private L_Proveedores objProvee = new L_Proveedores();
-        private Proveedor formulario = new Proveedor();
 
         public ModificarProveedor(E_Proveedores proveedor, Proveedor formulario)
         {
@@ -40,9 +39,8 @@ namespace Presentación
                 this.estado.SelectedIndex = 1;
             }
 
-            this.provincia.Text = proveedor.Provincia;
-            this.txtcanton.Text = proveedor.Canton;
-            this.formulario = formulario;
+            this.cBprovincia.Text = proveedor.Provincia;
+            this.cBcanton.Text = proveedor.Canton;
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)
@@ -85,8 +83,8 @@ namespace Presentación
                 {
                     objProveedor.NombreComercial = txtNombreComercial.Text.Trim();
                     objProveedor.Ruc = txtRUC.Text.Trim();
-                    objProveedor.Provincia = provincia.GetItemText(provincia.SelectedIndex);
-                    objProveedor.Canton = txtcanton.Text.Trim();
+                    objProveedor.Provincia = cBprovincia.GetItemText(cBprovincia.SelectedIndex);
+                    objProveedor.Canton = cBcanton.GetItemText(cBcanton.SelectedIndex);
                     objProveedor.Dirección = txtDireccion.Text.Trim();
                     objProveedor.NumeroTelefonoContacto = txtTelfContacto.Text.Trim();
                     objProveedor.RazonSocial = txtRazonSocial.Text;
@@ -104,7 +102,6 @@ namespace Presentación
                     objProvee.modificarProveedor(objProveedor);
                     //Proveedor proveedor1 = new Proveedor();
                     //proveedor1.mostarTodos();*/
-                    this.formulario.mostarTodos();
                     
                 }
 
@@ -119,7 +116,7 @@ namespace Presentación
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo ingresar el proveedor por " + ex, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo ingresar el proveedor por " + error, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -174,18 +171,19 @@ namespace Presentación
             if (numero.Length != 13)
                 return "RUC ingresado incorrecto\n";
 
-            MessageBox.Show(numero);
+            //MessageBox.Show(numero);
             if ((esNumero(numero)))
             {
-                MessageBox.Show(numero);
+               // MessageBox.Show(numero);
                 return "";
             }
 
             if (validarCedula(numero.Substring(0, 10)))
             {
                 if (numero.Substring(10, 3).Equals("001"))
-                    //return "RUC correcto";
-                    MessageBox.Show("correcto");
+                {//return "RUC correcto";
+                 //MessageBox.Show("correcto");
+                }
                 else
                 {
                     return "RUC ingresado incorrecto\n";
@@ -193,7 +191,7 @@ namespace Presentación
             }
             else
             {
-                MessageBox.Show("cedula");
+                //MessageBox.Show("cedula");
                 return "RUC ingresado incorrecto\n";
             }
             return "";
@@ -283,6 +281,51 @@ namespace Presentación
             {
                 return "Correo electronico incorrecto\n";
             }
+        }
+
+        private void cBprovincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cBprovincia.Items.Clear();
+            llenarProvincias();
+        }
+
+        private void cBcanton_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cBcanton.Items.Clear();
+             llenarCantones(Convert.ToString(cBprovincia.SelectedIndex+1));
+        }
+
+
+        public void llenarCantones(String provincia)
+        {
+            cBcanton.DataSource = objProvee.buscarCantones(provincia);
+            cBcanton.DisplayMember = "NombreCanton";
+            cBcanton.ValueMember = "idCanton";
+
+        }
+
+        public void llenarProvincias()
+        {
+            cBprovincia.DataSource = objProvee.mostrarProvincias();
+            cBprovincia.DisplayMember = "NombreProvincia";
+            cBprovincia.ValueMember = "idProvincia";
+
+        }
+
+
+
+        //Todo esto es para redimensionar el form con los paneles.
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

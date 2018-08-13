@@ -55,8 +55,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -140,6 +140,7 @@
             this.tBtipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBtipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtipo.Location = new System.Drawing.Point(175, 99);
+            this.tBtipo.MaxLength = 32;
             this.tBtipo.Name = "tBtipo";
             this.tBtipo.Size = new System.Drawing.Size(301, 21);
             this.tBtipo.TabIndex = 3;
@@ -152,6 +153,7 @@
             this.tBstock.Name = "tBstock";
             this.tBstock.Size = new System.Drawing.Size(301, 21);
             this.tBstock.TabIndex = 9;
+            this.tBstock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBstock_KeyPress);
             // 
             // label3
             // 
@@ -251,6 +253,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tBdescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBdescrip.Location = new System.Drawing.Point(175, 223);
+            this.tBdescrip.MaxLength = 250;
             this.tBdescrip.Multiline = true;
             this.tBdescrip.Name = "tBdescrip";
             this.tBdescrip.Size = new System.Drawing.Size(301, 76);
@@ -261,6 +264,7 @@
             this.tBprecioCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBprecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBprecioCompra.Location = new System.Drawing.Point(175, 313);
+            this.tBprecioCompra.MaxLength = 6;
             this.tBprecioCompra.Name = "tBprecioCompra";
             this.tBprecioCompra.Size = new System.Drawing.Size(301, 21);
             this.tBprecioCompra.TabIndex = 7;
@@ -308,18 +312,22 @@
             this.tBserie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBserie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBserie.Location = new System.Drawing.Point(175, 187);
+            this.tBserie.MaxLength = 32;
             this.tBserie.Name = "tBserie";
             this.tBserie.Size = new System.Drawing.Size(301, 21);
             this.tBserie.TabIndex = 5;
+            this.tBserie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBserie_KeyPress);
             // 
             // tBmarca
             // 
             this.tBmarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tBmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBmarca.Location = new System.Drawing.Point(175, 143);
+            this.tBmarca.MaxLength = 32;
             this.tBmarca.Name = "tBmarca";
             this.tBmarca.Size = new System.Drawing.Size(301, 21);
             this.tBmarca.TabIndex = 4;
+            this.tBmarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBmarca_KeyPress);
             // 
             // label5
             // 
@@ -422,6 +430,15 @@
             this.panelTitulo.Size = new System.Drawing.Size(566, 75);
             this.panelTitulo.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(105, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 63);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -435,15 +452,7 @@
             this.label1.Text = "Nuevo Producto";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(105, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 63);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // NuevoProducto
             // 

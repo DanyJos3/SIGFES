@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -17,16 +18,28 @@ namespace Presentación
 
     {
         private E_Proveedores objProveedor = new E_Proveedores();
-        private L_Proveedores objProvee = new L_Proveedores();
+        private L_Proveedores provedorCN = new L_Proveedores();
 
         public FormRegistrarProveedores()
         {
             InitializeComponent();
+            llenarProvincias();
         }
 
 
-        private void label8_Click(object sender, EventArgs e)
+        public void llenarCantones(String provincia)
         {
+            cBcantones.DataSource = provedorCN.buscarCantones(provincia);
+            cBcantones.DisplayMember = "NombreCanton";
+            cBcantones.ValueMember = "idCanton";
+
+        }
+
+        public void llenarProvincias()
+        {
+            cBprovincias.DataSource = provedorCN.mostrarProvincias();
+            cBprovincias.DisplayMember = "NombreProvincia";
+            cBprovincias.ValueMember = "idProvincia";
 
         }
 
@@ -60,36 +73,30 @@ namespace Presentación
                 {
                     objProveedor.NombreComercial = txtNombreComercial.Text.Trim();
                     objProveedor.Ruc = txtRuc.Text.Trim();
-                    objProveedor.Provincia = cbxProvincias.GetItemText(cbxProvincias.SelectedIndex);
-                    objProveedor.Canton = txtCanton.Text.Trim();
+                    objProveedor.Provincia = cBprovincias.GetItemText(cBprovincias.SelectedIndex);
+                    //objProveedor.Canton = txtCanton.Text.Trim();
                     objProveedor.Dirección = txtDireccion.Text.Trim();
                     objProveedor.NumeroTelefonoContacto = txtNumeroTelefono.Text.Trim();
                     objProveedor.RazonSocial = txtRazonSocial.Text.Trim();
                     objProveedor.CorreoElectronico = txtCorreo.Text.Trim();
 
+                    provedorCN.insertarProveedores(objProveedor);
                     MessageBox.Show("Proveedor Ingresado Correctamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    /*txtNombreComercial.Text = "";
+                    txtNombreComercial.Text = "";
                     txtRuc.Text = "";
-                    cbxProvincias.ResetText();
-                    txtCanton.Text = "";
+                    cBprovincias.ResetText();
+                    cBcantones.ResetText();
                     txtDireccion.Text = "";
                     txtRazonSocial.Text = "";
                     txtNumeroTelefono.Text = "";
-                    txtCorreo.Text = "";*/
-                
-    }
-                else
-                {
-                    MessageBox.Show(error);
+                    txtCorreo.Text = "";
+
                 }
-
-
-                objProvee.insertarProveedores(objProveedor); 
-
+              
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo ingresar el proveedor por " + ex, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo ingresar el proveedor por " + error, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -129,8 +136,9 @@ namespace Presentación
 
         private void cbxProvincias_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            llenarCantones(Convert.ToString(cBprovincias.SelectedIndex+1));
         }
+
         public static string validarNombre(string nombre)
         {
             if (nombre.Length > 50)
@@ -144,74 +152,76 @@ namespace Presentación
             if (numero.Length != 13)
                 return "RUC ingresado incorrecto\n";
 
-                MessageBox.Show(numero);
+            MessageBox.Show(numero);
             if ((esNumero(numero)))
             {
                 MessageBox.Show(numero);
                 return "";
             }
-            
-                if (validarCedula(numero.Substring(0, 10)))
+
+            if (validarCedula(numero.Substring(0, 10)))
+            {
+                if (numero.Substring(10, 3).Equals("001"))
                 {
-                    if (numero.Substring(10, 3).Equals("001")) 
-                //return "RUC correcto";
-                MessageBox.Show("correcto");
-                    else
-                    {
-                        return "RUC ingresado incorrecto\n";
-                    }
-                }
-                else
-                {
-                MessageBox.Show("cedula");
+                    //return "RUC correcto";
+                    //MessageBox.Show("correcto");
+                } 
+            else
+            {
                 return "RUC ingresado incorrecto\n";
-                }
+            }
+            }
+            else
+            {
+                MessageBox.Show("Cédula Incorrecta","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return "RUC ingresado incorrecto\n";
+            }
             return "";
-            
+
         }
 
-        public static bool validarCedula (string cedula)
+        public static bool validarCedula(string cedula)
         {
-            
 
-                char[] vector = cedula.ToArray();
-                int final = 0;
-                if (vector.Length == 10)
 
+            char[] vector = cedula.ToArray();
+            int final = 0;
+            if (vector.Length == 10)
+
+            {
+                for (int i = 0; i < vector.Length - 1; i++)
                 {
-                    for (int i = 0; i < vector.Length - 1; i++)
+                    int numero = Convert.ToInt32(vector[i].ToString());
+                    if ((i + 1) % 2 == 1)
                     {
-                        int numero = Convert.ToInt32(vector[i].ToString());
-                        if ((i + 1) % 2 == 1)
+                        numero = Convert.ToInt32(vector[i].ToString()) * 2;
+                        if (numero > 9)
                         {
-                            numero = Convert.ToInt32(vector[i].ToString()) * 2;
-                            if (numero > 9)
-                            {
-                                numero = numero - 9;
-                            }
+                            numero = numero - 9;
                         }
-                        final += numero;
                     }
-                    final = 10 - (final % 10);
-                    if (vector[vector.Length - 1].ToString().Equals(final.ToString()))
+                    final += numero;
+                }
+                final = 10 - (final % 10);
+                if (vector[vector.Length - 1].ToString().Equals(final.ToString()))
+                {
+                    // MessageBox.Show("CedulaCorrecta");
+                    return true;
+                }
+                if (final > 9)
+                {
+                    if (vector[vector.Length - 1].ToString().Equals("0"))
                     {
-                       // MessageBox.Show("CedulaCorrecta");
                         return true;
                     }
-                    if (final > 9)
-                    {
-                        if (vector[vector.Length - 1].ToString().Equals("0"))
-                        {
-                            return true;
-                        }
-                    }
                 }
-                return false;
-            
-            
+            }
+            return false;
+
+
         }
 
-        public static string validarTelefono (string telefono)
+        public static string validarTelefono(string telefono)
         {
             if (esNumero(telefono))
             {
@@ -253,6 +263,19 @@ namespace Presentación
             {
                 return "Correo electronico incorrecto\n";
             }
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

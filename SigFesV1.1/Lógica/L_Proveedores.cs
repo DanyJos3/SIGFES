@@ -33,6 +33,16 @@ namespace Lógica
             proveedoresCD.insertarProveedor(objProveedores, "SPinsertarProveedor");
         }
 
+        public DataTable mostrarProvincias()
+        {
+
+            DataTable tabla = new DataTable();
+            tabla = proveedoresCD.listar("SPobtenerProvincias");
+            return tabla;
+        }
+
+
+
         public void modificarProveedor(E_Proveedores objProveedores)
         {
             proveedoresCD.modificarProveedor(objProveedores, "SPmodificarProveedor");
@@ -54,6 +64,14 @@ namespace Lógica
         {
             tabla = new DataTable();
             tabla = proveedoresCD.buscar(parametro, "SPproveedoresporNombre");
+            return tabla;
+        }
+
+
+        public DataTable buscarCantones(string parametro)
+        {
+            tabla = new DataTable();
+            tabla = proveedoresCD.buscar(parametro, "SPobtenerCanton");
             return tabla;
         }
     }

@@ -129,7 +129,7 @@
             "RUC",
             "Nombre Comercial",
             "Mostrar todos los proveedores disponibles"});
-            this.cBopc.Location = new System.Drawing.Point(3, 6);
+            this.cBopc.Location = new System.Drawing.Point(3, 7);
             this.cBopc.Name = "cBopc";
             this.cBopc.Size = new System.Drawing.Size(210, 23);
             this.cBopc.TabIndex = 5;

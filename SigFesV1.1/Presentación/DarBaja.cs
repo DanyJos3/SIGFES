@@ -112,6 +112,11 @@ namespace Presentación
                 {
                     int aux2 = Convert.ToInt16(stock);
                     int aux3 = aux2 - aux;
+
+                    if (aux3 == 0)
+                    {
+                        productoCN.inhabilitar(this.codigo);
+                    }
                     productoCN.modificarStock(this.codigo,Convert.ToString(aux3));
                     MessageBox.Show("Stock modificado exitosamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -131,6 +136,11 @@ namespace Presentación
                 {
                     
                     decimal aux2 = stock - aux;
+
+                    if (aux2 == 0)
+                    {
+                        productoCN.inhabilitar(this.codigo);
+                    }
 
                     productoCN.modificarStock(this.codigo, Convert.ToString(aux2));
                     MessageBox.Show("Stock modificado exitosamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
