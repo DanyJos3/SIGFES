@@ -157,9 +157,7 @@ namespace Presentación
 
         private void cBopc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(cBopc.SelectedText);
-            MessageBox.Show(cBopc.SelectedItem+"");
-            MessageBox.Show(cBopc.SelectedIndex+"");
+            
 
             if (cBopc.SelectedIndex == 0)
             {

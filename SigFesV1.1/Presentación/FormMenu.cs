@@ -25,6 +25,8 @@ namespace Presentación
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             iconmaximizar.Visible = false;
             iconrestaurar.Visible = true;
+            this.tTproducto.SetToolTip(btnInventario, "Clic derecho y escoga una opción");
+            this.tTproducto.SetToolTip(btnProveedores, "Clic derecho y escoga una opción");
 
         }
 
@@ -143,7 +145,6 @@ namespace Presentación
         private void btnInventario_Click(object sender, EventArgs e)
         {
 
-            this.tTproducto.SetToolTip(btnInventario, "Clic derecho y escoga una opción");
             //tTproducto.Show("Clic derecho y escoga una opción",btnInventario);
            
         }
@@ -188,6 +189,25 @@ namespace Presentación
         private void btnServ_Click(object sender, EventArgs e)
         {
             FormServicios frm = new FormServicios();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ProveedoresDisponibles_Click(object sender, EventArgs e)
+        {
+            Proveedor frm = new Proveedor();
+            frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
+            AbrirFormInPanel(frm);
+        }
+
+        private void ProveedoresInactivos_Click(object sender, EventArgs e)
+        {
+            ProveedoresInactivos frm = new ProveedoresInactivos();
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
         }
