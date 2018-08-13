@@ -64,35 +64,37 @@ namespace Presentación
                     error = "error";
                 }
                 */
-                error += validarNombre(txtNombreComercial.Text);
-                error += validarRUC(txtRuc.Text);
-                error += validarTelefono(txtNumeroTelefono.Text);
-                error += validarMail(txtCorreo.Text);
+                //error += validarNombre(txtNombreComercial.Text);
+                error += validarRUC(txtRuc.Text.Trim());
+                //error += validarTelefono(txtNumeroTelefono.Text);
+                //error += validarMail(txtCorreo.Text);
 
                 if (error.Equals(""))
                 {
-                    objProveedor.NombreComercial = txtNombreComercial.Text.Trim();
+                    
+                    objProveedor.NombreComercial = this.txtNombreComercial.Text.Trim();
                     objProveedor.Ruc = txtRuc.Text.Trim();
                     objProveedor.Provincia = cBprovincias.GetItemText(cBprovincias.SelectedIndex);
-                    //objProveedor.Canton = txtCanton.Text.Trim();
+                    objProveedor.Canton = cBcantones.GetItemText(cBcantones.SelectedIndex);
                     objProveedor.Dirección = txtDireccion.Text.Trim();
                     objProveedor.NumeroTelefonoContacto = txtNumeroTelefono.Text.Trim();
                     objProveedor.RazonSocial = txtRazonSocial.Text.Trim();
                     objProveedor.CorreoElectronico = txtCorreo.Text.Trim();
 
-                    provedorCN.insertarProveedores(objProveedor);
+                    
                     MessageBox.Show("Proveedor Ingresado Correctamente", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNombreComercial.Text = "";
-                    txtRuc.Text = "";
-                    cBprovincias.ResetText();
-                    cBcantones.ResetText();
-                    txtDireccion.Text = "";
-                    txtRazonSocial.Text = "";
-                    txtNumeroTelefono.Text = "";
-                    txtCorreo.Text = "";
+                    //txtNombreComercial.Text = "";
+                    //txtRuc.Text = "";
+                    //cBprovincias.ResetText();
+                    //cBcantones.ResetText();
+                    //txtDireccion.Text = "";
+                    //txtRazonSocial.Text = "";
+                    //txtNumeroTelefono.Text = "";
+                    //txtCorreo.Text = "";
 
                 }
-              
+                provedorCN.insertarProveedores(objProveedor);
+
             }
             catch (Exception ex)
             {
@@ -152,7 +154,7 @@ namespace Presentación
             if (numero.Length != 13)
                 return "RUC ingresado incorrecto\n";
 
-            MessageBox.Show(numero);
+            //MessageBox.Show(numero);
             if ((esNumero(numero)))
             {
                 MessageBox.Show(numero);
@@ -163,7 +165,7 @@ namespace Presentación
             {
                 if (numero.Substring(10, 3).Equals("001"))
                 {
-                    //return "RUC correcto";
+                    return "RUC correcto";
                     //MessageBox.Show("correcto");
                 } 
             else
@@ -176,6 +178,7 @@ namespace Presentación
                 MessageBox.Show("Cédula Incorrecta","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return "RUC ingresado incorrecto\n";
             }
+
             return "";
 
         }

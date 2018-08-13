@@ -21,7 +21,7 @@ namespace Presentación
 
         private void FormProductos_Load(object sender, EventArgs e)
         {
-            mostarDisponibles();
+            //mostarDisponibles();
         }
 
 
@@ -136,7 +136,7 @@ namespace Presentación
             {
                 int auxStock = Convert.ToInt32(dGVproductos.CurrentRow.Cells[8].Value.ToString());
 
-                MessageBox.Show(auxStock+"");
+                
                 if (auxStock == 0)
                 {
                     productoCN.inhabilitar(Convert.ToInt32(dGVproductos.CurrentRow.Cells[0].Value.ToString()));
@@ -244,7 +244,7 @@ namespace Presentación
             }
             else
             {
-                MessageBox.Show("Parámetro inválido");
+                MessageBox.Show("Seleccione un parámetro de búsqueda");
             }
 
         }

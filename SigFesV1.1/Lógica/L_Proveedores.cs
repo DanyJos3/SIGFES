@@ -11,7 +11,7 @@ namespace Lógica
 {
      public class L_Proveedores
     {
-        private D_Proveedores proveedoresCD = new D_Proveedores();
+        public D_Proveedores proveedoresCD = new D_Proveedores();
         private DataTable tabla;
 
         public DataTable MostrarProveedor()

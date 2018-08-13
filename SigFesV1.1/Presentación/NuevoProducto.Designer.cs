@@ -268,6 +268,7 @@
             this.tBprecioCompra.Name = "tBprecioCompra";
             this.tBprecioCompra.Size = new System.Drawing.Size(301, 21);
             this.tBprecioCompra.TabIndex = 7;
+            this.tBprecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBprecioCompra_KeyPress);
             // 
             // cBcategoria
             // 

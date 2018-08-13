@@ -65,7 +65,7 @@ namespace Datos
             comd.CommandType = CommandType.StoredProcedure;
             try
             {
-                comd.Parameters.AddWithValue("@nombreComercial", objProveedores.NombreComercial);
+                comd.Parameters.AddWithValue("@nombreComercial", "Tecnomega");
                 comd.Parameters.AddWithValue("@RUC", objProveedores.Ruc);
                 comd.Parameters.AddWithValue("@provincia", objProveedores.Provincia);
                 comd.Parameters.AddWithValue("@cantón", objProveedores.Canton);
@@ -121,7 +121,7 @@ namespace Datos
             comd.Connection = conn.abrirConexión();
             comd.CommandText = procedimiento;
             comd.CommandType = CommandType.StoredProcedure;
-            MessageBox.Show("" + RUC, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show("" + RUC, "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             try
             {
 

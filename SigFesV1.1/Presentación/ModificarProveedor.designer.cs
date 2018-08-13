@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cBcanton = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.estado = new System.Windows.Forms.ComboBox();
             this.txtNombreComercial = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.cBcanton = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -132,6 +132,22 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(479, 473);
             this.tableLayoutPanel2.TabIndex = 3;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // cBcanton
+            // 
+            this.cBcanton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cBcanton.BackColor = System.Drawing.Color.LightGray;
+            this.cBcanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBcanton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cBcanton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBcanton.FormattingEnabled = true;
+            this.cBcanton.Location = new System.Drawing.Point(175, 228);
+            this.cBcanton.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.cBcanton.Name = "cBcanton";
+            this.cBcanton.Size = new System.Drawing.Size(301, 23);
+            this.cBcanton.TabIndex = 28;
+            this.cBcanton.SelectedIndexChanged += new System.EventHandler(this.cBcanton_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -235,7 +251,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 52);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Telefono de contacto";
+            this.label7.Text = "Teléfono de contacto";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -393,22 +409,6 @@
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // cBcanton
-            // 
-            this.cBcanton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cBcanton.BackColor = System.Drawing.Color.LightGray;
-            this.cBcanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBcanton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cBcanton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBcanton.FormattingEnabled = true;
-            this.cBcanton.Location = new System.Drawing.Point(175, 228);
-            this.cBcanton.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.cBcanton.Name = "cBcanton";
-            this.cBcanton.Size = new System.Drawing.Size(301, 23);
-            this.cBcanton.TabIndex = 28;
-            this.cBcanton.SelectedIndexChanged += new System.EventHandler(this.cBcanton_SelectedIndexChanged);
             // 
             // ModificarProveedor
             // 

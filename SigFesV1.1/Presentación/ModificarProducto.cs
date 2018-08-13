@@ -71,5 +71,45 @@ namespace Presentación
             }
 
         }
+
+        private void tBprecioCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+
+            bool IsDec = false;
+            int nroDec = 0;
+
+            for (int i = 0; i < this.tBprecioCompra.Text.Length; i++)
+            {
+                if (this.tBprecioCompra.Text[i] == ',')
+                    IsDec = true;
+
+                if (IsDec && nroDec++ >= 2)
+                {
+                    MessageBox.Show("Solo se permiten 2 decimales");
+                    e.Handled = true;
+
+                    return;
+
+                    
+                }
+
+            }
+
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 44)
+                e.Handled = (IsDec) ? true : false;
+            else
+                e.Handled = true;
+        }
     }
 }

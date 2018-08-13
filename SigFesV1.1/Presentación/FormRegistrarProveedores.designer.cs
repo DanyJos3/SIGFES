@@ -180,6 +180,7 @@
             this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(175, 259);
+            this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(301, 21);
             this.txtDireccion.TabIndex = 5;
@@ -224,6 +225,7 @@
             this.txtNumeroTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumeroTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroTelefono.Location = new System.Drawing.Point(175, 320);
+            this.txtNumeroTelefono.MaxLength = 10;
             this.txtNumeroTelefono.Name = "txtNumeroTelefono";
             this.txtNumeroTelefono.Size = new System.Drawing.Size(301, 21);
             this.txtNumeroTelefono.TabIndex = 7;
@@ -281,6 +283,7 @@
             this.txtRuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRuc.Location = new System.Drawing.Point(175, 79);
+            this.txtRuc.MaxLength = 15;
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(301, 21);
             this.txtRuc.TabIndex = 26;

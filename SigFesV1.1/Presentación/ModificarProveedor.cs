@@ -250,7 +250,7 @@ namespace Presentación
             }
             else
             {
-                return "solo debe ingresar digitos en el campo telefono\n";
+                return "Teléfono de contacto Incorrecto";
             }
 
         }

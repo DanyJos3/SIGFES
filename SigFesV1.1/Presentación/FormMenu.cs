@@ -198,16 +198,17 @@ namespace Presentación
             
         }
 
-        private void ProveedoresDisponibles_Click(object sender, EventArgs e)
+      
+        private void ProveedoresInactivos_Click(object sender, EventArgs e)
         {
-            Proveedor frm = new Proveedor();
+            ProveedoresInactivos frm = new ProveedoresInactivos();
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
         }
 
-        private void ProveedoresInactivos_Click(object sender, EventArgs e)
+        private void ProveedoresDisponibles_Click(object sender, EventArgs e)
         {
-            ProveedoresInactivos frm = new ProveedoresInactivos();
+            Proveedor frm = new Proveedor();
             frm.FormClosed += new FormClosedEventHandler(mostrarlogoAlCerrarForm);
             AbrirFormInPanel(frm);
         }

@@ -51,11 +51,11 @@
             this.productosDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProveedores = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.tTproducto = new System.Windows.Forms.ToolTip(this.components);
             this.menúProveedores = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ProveedoresDisponibles = new System.Windows.Forms.ToolStripMenuItem();
             this.ProveedoresInactivos = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.tTproducto = new System.Windows.Forms.ToolTip(this.components);
             this.panelprincipal.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
@@ -365,6 +365,40 @@
             this.btnProveedores.UseVisualStyleBackColor = false;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
+            // menúProveedores
+            // 
+            this.menúProveedores.AllowMerge = false;
+            this.menúProveedores.AutoSize = false;
+            this.menúProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.menúProveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.menúProveedores.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menúProveedores.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ProveedoresDisponibles,
+            this.ProveedoresInactivos});
+            this.menúProveedores.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menúProveedores.Name = "menúInventario";
+            this.menúProveedores.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menúProveedores.ShowImageMargin = false;
+            this.menúProveedores.Size = new System.Drawing.Size(150, 80);
+            this.menúProveedores.TabStop = true;
+            // 
+            // ProveedoresDisponibles
+            // 
+            this.ProveedoresDisponibles.ForeColor = System.Drawing.Color.White;
+            this.ProveedoresDisponibles.Name = "ProveedoresDisponibles";
+            this.ProveedoresDisponibles.Size = new System.Drawing.Size(173, 22);
+            this.ProveedoresDisponibles.Text = "Gestión de Proveedores";
+            this.ProveedoresDisponibles.Click += new System.EventHandler(this.ProveedoresDisponibles_Click);
+            // 
+            // ProveedoresInactivos
+            // 
+            this.ProveedoresInactivos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ProveedoresInactivos.ForeColor = System.Drawing.Color.White;
+            this.ProveedoresInactivos.Name = "ProveedoresInactivos";
+            this.ProveedoresInactivos.Size = new System.Drawing.Size(173, 22);
+            this.ProveedoresInactivos.Text = "Proveedores Inactivos";
+            this.ProveedoresInactivos.Click += new System.EventHandler(this.ProveedoresInactivos_Click);
+            // 
             // btnUser
             // 
             this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
@@ -393,40 +427,6 @@
             this.tTproducto.IsBalloon = true;
             this.tTproducto.ReshowDelay = 60;
             this.tTproducto.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            // 
-            // menúProveedores
-            // 
-            this.menúProveedores.AllowMerge = false;
-            this.menúProveedores.AutoSize = false;
-            this.menúProveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.menúProveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.menúProveedores.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menúProveedores.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ProveedoresDisponibles,
-            this.ProveedoresInactivos});
-            this.menúProveedores.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menúProveedores.Name = "menúInventario";
-            this.menúProveedores.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menúProveedores.ShowImageMargin = false;
-            this.menúProveedores.Size = new System.Drawing.Size(150, 80);
-            this.menúProveedores.TabStop = true;
-            // 
-            // ProveedoresDisponibles
-            // 
-            this.ProveedoresDisponibles.ForeColor = System.Drawing.Color.White;
-            this.ProveedoresDisponibles.Name = "ProveedoresDisponibles";
-            this.ProveedoresDisponibles.Size = new System.Drawing.Size(178, 22);
-            this.ProveedoresDisponibles.Text = "Proveedores Disponibles";
-            this.ProveedoresDisponibles.Click += new System.EventHandler(this.ProveedoresDisponibles_Click);
-            // 
-            // ProveedoresInactivos
-            // 
-            this.ProveedoresInactivos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ProveedoresInactivos.ForeColor = System.Drawing.Color.White;
-            this.ProveedoresInactivos.Name = "ProveedoresInactivos";
-            this.ProveedoresInactivos.Size = new System.Drawing.Size(178, 22);
-            this.ProveedoresInactivos.Text = "Proveedores Inactivos";
-            this.ProveedoresInactivos.Click += new System.EventHandler(this.ProveedoresInactivos_Click);
             // 
             // FormMenu
             // 
