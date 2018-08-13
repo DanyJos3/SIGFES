@@ -30,18 +30,10 @@ namespace Presentación
         }
 
       
-       
-
-       
-        private void button1_Click(object sender, EventArgs e)
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
-            MessageBox.Show("Desea hacer un nuevo reporte","aviso",MessageBoxButtons.YesNo);
-        }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Se generó el reporte exitosamente", "aviso", MessageBoxButtons.OK);
-        }
+        }   
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -52,6 +44,23 @@ namespace Presentación
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desea hacer un nuevo reporte", "aviso", MessageBoxButtons.YesNo);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se generó el reporte exitosamente", "aviso", MessageBoxButtons.OK);
+        }
+
+       
     }
 
  }
