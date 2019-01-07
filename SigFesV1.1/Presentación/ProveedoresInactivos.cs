@@ -39,6 +39,7 @@ namespace Presentación
                 String Ruc = dGVprov.CurrentRow.Cells[3].Value.ToString();
                 proveedor.cambiarEstado(Ruc);
                 //mostarProveedoresInactivos();
+                MessageBox.Show("Proveedor dado de alta");
 
             }
             else

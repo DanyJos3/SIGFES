@@ -29,7 +29,8 @@ namespace Presentación
             this.txtTelfContacto.Text = proveedor.NumeroTelefonoContacto;
             this.txtRazonSocial.Text = proveedor.RazonSocial;
             this.txtCorreoelectronico.Text = proveedor.CorreoElectronico;
-           
+
+            llenarProvincias();
             if (proveedor.Estado)
             {
                 this.estado.SelectedIndex = 0;
@@ -286,13 +287,14 @@ namespace Presentación
         private void cBprovincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             //cBprovincia.Items.Clear();
-            llenarProvincias();
+            //llenarProvincias();
+            llenarCantones(Convert.ToString(cBprovincia.SelectedIndex + 1));
         }
 
         private void cBcanton_SelectedIndexChanged(object sender, EventArgs e)
         {
             //cBcanton.Items.Clear();
-             llenarCantones(Convert.ToString(cBprovincia.SelectedIndex+1));
+            // llenarCantones(Convert.ToString(cBprovincia.SelectedIndex+1));
         }
 
 
